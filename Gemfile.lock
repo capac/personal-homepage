@@ -3,6 +3,8 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    classifier-reborn (2.2.0)
+      fast-stemmer (~> 1.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.6)
     em-websocket (0.5.1)
@@ -12,6 +14,9 @@ GEM
     eventmachine (1.2.7-java)
     eventmachine (1.2.7-x64-mingw32)
     eventmachine (1.2.7-x86-mingw32)
+    faraday (1.0.1)
+      multipart-post (>= 1.2, < 3)
+    fast-stemmer (1.0.2)
     ffi (1.13.1)
     ffi (1.13.1-java)
     ffi (1.13.1-x64-mingw32)
@@ -36,9 +41,15 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.14.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-gist (1.5.0)
+      octokit (~> 4.2)
     jekyll-paginate (1.1.0)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
+    jekyll-seo-tag (2.6.1)
+      jekyll (>= 3.3, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-theme-lanyon (1.1.0)
@@ -54,6 +65,10 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
+    multipart-post (2.1.1)
+    octokit (4.18.0)
+      faraday (>= 0.9)
+      sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.5)
@@ -67,6 +82,9 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sawyer (0.8.2)
+      addressable (>= 2.3.5)
+      faraday (> 0.8, < 2.0)
     thread_safe (0.3.6)
     thread_safe (0.3.6-java)
     tzinfo (1.2.7)
@@ -83,8 +101,13 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  classifier-reborn
   jekyll (~> 3.8)
   jekyll-feed (~> 0.12)
+  jekyll-gist
+  jekyll-paginate
+  jekyll-redirect-from
+  jekyll-seo-tag
   jekyll-theme-lanyon
   tzinfo (~> 1.2)
   tzinfo-data
