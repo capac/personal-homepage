@@ -1,0 +1,38 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>{{ site.author.name }}</p>
+    <p>{{ site.description }}</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+
+    {% comment %}
+      The code below dynamically generates a sidebar nav of pages with
+      `layout: page` in the front-matter.
+    {% endcomment %}
+
+    <a class="sidebar-nav-item" href="{{ site.baseurl }}/about">About</a>
+    <a class="sidebar-nav-item" href="{{ site.baseurl }}/blog">Blog</a>
+    <!-- <a class="sidebar-nav-item" href="{{ site.baseurl }}/notebooks/">Notebooks</a> -->
+    <span class="sidebar-nav-item"></span>
+    <p></p>
+    <a class="sidebar-nav-item" href="{{ site.github_url }}">Github</a>
+    <a class="sidebar-nav-item" href="{{ site.googlescholar_url }}">Google Scholar</a>
+    <a class="sidebar-nav-item" href="{{ site.linkedin_url }}">LinkedIn</a>
+    <!-- <span class="sidebar-nav-item"></span> -->
+    <!-- <a class="sidebar-nav-item" href="{{ site.baseurl }}/imprint">Imprint</a> -->
+    <!-- <a class="sidebar-nav-item" href="{{ site.baseurl }}/privacy-policy">Privacy Policy</a> -->
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
+  </div>
+</div>
