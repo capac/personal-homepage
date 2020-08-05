@@ -9,7 +9,7 @@ We attach great importance to the protection of your data. In order to fully inf
 
 Personal data that you transmit electronically on this website, such as name, e-mail address, address or other personal information, will only be used by us for the specified purpose, kept securely and not passed on to third parties. The provider automatically collects and stores information on the web server such as the browser, operating system, referring page, IP address, time of access, etc. This data can not be assigned to any specific person without checking other data sources and we will not further evaluate this data unless it is illegal Use of our website exists.
 
-##Form data and comments
+## Form data and comments
 
 If website visitors leave comments or form entries, the data entered and their IP addresses are saved. This is done for security, if someone writes illegal content (insults, extreme left or right propaganda, hate postings, etc.). In this case we are interested in the identity of the author.
 
@@ -28,11 +28,11 @@ You can prevent the installation of cookies by setting your browser software acc
 
 ## DISQUS comment function
 
-On the basis of our legitimate interests in efficient, secure and user-friendly comment management according to Art. 6 para. 1 lit. f. GDPR is the comment service DISQUS, offered by DISQUS, Inc., 301 Howard St, Floor 3 San Francisco, California- 94105, USA. 
+On the basis of our legitimate interests in efficient, secure and user-friendly comment management according to Art. 6 para. 1 lit. f. GDPR is the comment service DISQUS, offered by DISQUS, Inc., 717 Market Street, Suite 700, San Francisco, CA 94103, USA. 
 
 To use the DISQUS comment function, users can log in via their own DISQUS user account or an existing social media account (e.g. OpenID, Facebook, Twitter or Google). The user login data is obtained from the platforms through DISQS. It is also possible to use the DISQUS comment function as a guest without creating or using a user account with DISQUS or one of the specified social media providers.
 
-We only embed DISQUS with its functions on our website, whereby we can influence the comments of the users. However, the users enter into a direct contractual relationship with DISQUS, in the context of which DISQS processes the comments of the users and is a contact person for any deletion of the users' data. We refer to DISQUS 'data protection declaration: [https://help.disqus.com/en/articles/1717103-disqus-privacy-policy](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) and also point out to users that they can assume that DISQUS stores not only the comment content but also their IP address and the time of the comment, as well as saves cookies on the users' computers and can use them to display advertisements. However, users can object to the processing of their data for the purpose of displaying advertisements: [https://disqus.com/data-sharing-settings](https://disqus.com/data-sharing-settings). 
+We only embed DISQUS with its functions on our website, whereby we can influence the comments of the users. However, the users enter into a direct contractual relationship with DISQUS, in the context of which DISQS processes the comments of the users and is a contact person for any deletion of the users' data. We refer to DISQUS' data protection declaration: [https://help.disqus.com/en/articles/1717103-disqus-privacy-policy](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) and also point out to users that they can assume that DISQUS stores not only the comment content but also their IP address and the time of the comment, as well as saves cookies on the users' computers and can use them to display advertisements. However, users can object to the processing of their data for the purpose of displaying advertisements: [https://disqus.com/data-sharing-settings](https://disqus.com/data-sharing-settings).
 
 ## Right of information
 
