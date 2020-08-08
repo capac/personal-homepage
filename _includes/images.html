@@ -1,9 +1,0 @@
-{% if page.image-url %}
-  {% if page.image-source %}
-    {% if page.image-author %}
-      <span class="footnote">Photo from <a href="{{ page.image-url }}">{{ page.image-author }} on {{ page.image-source }}</a></span>
-    {% else %}
-      <span class="footnote">Photo from <a href="{{ page.image-url }}">{{ page.image-source }}</a></span>
-    {% endif %}
-  {% endif %}
-{% endif %}
