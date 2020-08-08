@@ -6,14 +6,21 @@ title: Blog
 <div class="posts">
   {% for post in paginator.posts %}
     <div class="post">
-      <h1 class="post-title">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          {% if post.image %}
-            <img src="{{ site.baseurl }}{{ post.image }}">
+        {% if post.image %}
+          <img src="{{ site.baseurl }}{{ post.image }}">
+        {% endif %}
+        {% if post.image-url %}
+          {% if post.image-source %}
+            {% if post.image-author %}
+              <span class="footnote">Photo from <a href="{{ post.image-url }}">{{ post.image-author }} on {{ post.image-source }}</a></span>
+            {% else %}
+              <span class="footnote">Photo from <a href="{{ post.image-url }}">{{ post.image-source }}</a></span>
+            {% endif %}
           {% endif %}
-          {{ post.title }}
-        </a>
-      </h1>
+        {% endif %}
+      <a href="{{ post.url | prepend: site.baseurl }}">
+        <h1 class="post-title">{{ post.title }}</h1>
+      </a>
       <span class="post-date">{{ post.date | date_to_string }}</span>
       <p>{{ post.excerpt }}</p>
     </div>
