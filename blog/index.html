@@ -12,9 +12,9 @@ title: Blog
         {% if post.image-url %}
           {% if post.image-source %}
             {% if post.image-author %}
-              <span class="footnote">Photo from <a href="{{ post.image-url }}">{{ post.image-author }} on {{ post.image-source }}</a></span>
+              <span class="footnote">Photo by <a href="{{ post.image-url }}">{{ post.image-author }} on {{ post.image-source }}</a></span>
             {% else %}
-              <span class="footnote">Photo from <a href="{{ post.image-url }}">{{ post.image-source }}</a></span>
+              <span class="footnote">Photo by <a href="{{ post.image-url }}">{{ post.image-source }}</a></span>
             {% endif %}
           {% endif %}
         {% endif %}
