@@ -19,10 +19,16 @@
 # in the templates via {{ site.myvariable }}.
 
 # Site settings
-name: Angelo Varlotta
 title: Making Space With Data
-tagline: "Freelance Data Scientist &middot; PhD in Physics &middot; Data Science &middot; Data Visualization &middot; Machine Learning"
+author: Angelo Varlotta
+tagline: A blog on data insights
+description: "Freelance Data Scientist &middot; PhD in Physics &middot; Data Science &middot; Data Visualization &middot; Machine Learning"
 url: "http://angelovarlotta.com"
+baseurl: ""
+
+# About
+author:
+  name: Angelo Varlotta
 
 # Social media URLs
 linkedin_url:  https://www.linkedin.com/in/angelovarlotta/
@@ -47,17 +53,10 @@ paginate_path: "/blog/page:num"
 permalink: /:categories/:title/
 
 # Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
 exclude:
   - .sass-cache/
   - Gemfile
   - Gemfile.lock
-  - run-jekyll.sh
-  - README.md
 
+# Custom variables
+google_analytics_id: UA-175694116-1
