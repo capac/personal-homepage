@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![Monument Valley](/assets/about/monument-valley.jpg "Monument Valley")
+![Monument Valley](/assets/about/monument-valley.jpg)
 
 I am freelance data scientist with many years of experience as a graduate student and postdoctoral researcher in astronomy. I have studied in Italy and the United States where I obtained my PhD in high-energy astrophysics, working on gamma-ray emissions from galactic sources.
 
