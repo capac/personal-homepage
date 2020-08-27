@@ -24,6 +24,9 @@ image:
           {% if post.image %}
             <img src="{{ site.baseurl }}{{ post.image }}">
           {% endif %}
+          {% if post.caption %}
+            <div style="width:image width px; font-size:80%; text-align:center;"><span class="footnote">{{ post.caption }}</a></span></div>
+          {% endif %}
           {% if post.image-url %}
             {% if post.image-source %}
               {% if post.image-author %}
