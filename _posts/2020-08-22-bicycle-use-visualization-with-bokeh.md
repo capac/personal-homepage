@@ -4,7 +4,7 @@ title: Bicycle Use Visualization With Bokeh
 featured: true
 image: /assets/bicycle-use-visualization-with-bokeh/bike_traffic.png
 caption: Average weekday public bicycle traffic in London UK at 17:45 pm. The large blue and purple dots show the inflow to King's Cross and Waterloo train stations, while the light green and orange dots show the outflows from central London. There are also sizable, light green dots for dock stations in Hyde Park and Kensington Gardens and Queen Elizabeth Olympic Park. 
-tags: london, bicycles, bokeh
+tags: ['London', 'bicycles', 'Bokeh']
 comments: true
 ---
 

@@ -6,7 +6,7 @@ image: /assets/public-bicycle-use-in-london-during-covid-lockdown/robert-keane-6
 image-url: https://unsplash.com/photos/6GDhWC08zO4
 image-source: Unsplash
 image-author: Robert Keane
-tags: london, bicycles
+tags: ['London', 'bicycles']
 ---
 
 The public bicycle share scheme in London has enjoyed an overwhelming success since its introduction in July 2010. The program is currently at [its tenth year and has proven to be very popular](https://tfl.gov.uk/info-for/media/press-releases/2020/july/tfl-celebrates-10-years-of-cycle-hire-with-a-record-breaking-summer-for-santander-cycles) among Londoners who now as of July 2020 have access to 781 docking stations and over 12,000 bikes throughout the city. However due to the lockdown caused by the COVID pandemic there has been a distinct change in the frequency of use of public transportion by city residents, and cycling has followed this trend as well.

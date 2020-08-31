@@ -6,7 +6,7 @@ image: /assets/bicycle-share-use-in-london/ben-lodge-hmKirr0dnaM-unsplash.jpg
 image-url: https://unsplash.com/photos/hmKirr0dnaM
 image-source: Unsplash
 image-author: Ben Lodge
-tags: london, bicycles
+tags: ['London', 'bicycles']
 ---
 
 The public bicycle sharing scheme has been in use in London for just over ten years now, since it was first introduced by the then mayor of London Boris Johnson in July 2010. It has had a slow but steady increase in use and popularity over the course of the years, such that there is [a plan to further increase the number of dock stations and bicycles currently in use](https://tfl.gov.uk/info-for/media/press-releases/2020/june/tfl-to-expand-santander-cycles-scheme-to-keep-up-with-demand) to cover a larger area of the downtown and nearby boroughs of the city. The bicycle usage by London city residents is most definitely an interesting project in data analysis and visualization in itself, given particularly that [the data is freely available for public consumption on the TfL web site](https://cycling.data.tfl.gov.uk/).
