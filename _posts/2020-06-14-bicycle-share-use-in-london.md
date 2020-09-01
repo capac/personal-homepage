@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bicycle Share Use in London
+featured: false
 image: /assets/bicycle-share-use-in-london/ben-lodge-hmKirr0dnaM-unsplash.jpg
 image-url: https://unsplash.com/photos/hmKirr0dnaM
 image-source: Unsplash
