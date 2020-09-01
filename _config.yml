@@ -57,6 +57,3 @@ exclude:
   - .sass-cache/
   - Gemfile
   - Gemfile.lock
-
-# Custom variables
-google_analytics_id: UA-175694116-1
