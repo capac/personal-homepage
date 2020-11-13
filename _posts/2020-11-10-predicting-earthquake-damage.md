@@ -2,12 +2,12 @@
 layout: post
 title: Predicting Earthquake Damage with Ensemble Learners
 featured: True
-draft: True
 image: /assets/predicting-earthquake-damage-with-ensemble-learners/sebastian-pena-lambarri-7ky9_t_mpRI-unsplash.jpg
 image-url: https://unsplash.com/photos/7ky9_t_mpRI
 image-source: Unsplash
 image-author: Sebastian Pena Lambarri
 tags: ['Machine Learning', 'Ensemble Learners', 'Categorical Features', 'scikit-learn']
+comments: True
 ---
 
 One of the main appeals of machine learning is that one can immediately start making fairly good data predictions without having estensive domain knowledge on the subject at matter, which at times can produce unexpected and surprising insights. This happens to be the case concerning the [machine learning data set available at _DrivenData_](https://www.drivendata.org/competitions/57/nepal-earthquake/) on the [Gorkha earthquake in Nepal](https://en.wikipedia.org/wiki/April_2015_Nepal_earthquake), which on April 25, 2015 caused thousands of deaths and extreme hardship for all of the survivors, as well as massive damage to the country's public buildings, infrastructure and private households.
@@ -52,4 +52,4 @@ The following plot ilustrates the confusion matrix heat map for the actual and p
     caption="Confusion matrix heat map for actual and predicted damage levels of buildings in the Gorkha earthquake."
 %}
 
-As of the date of posting, for the specific _DrivenData_ competition this technique was able to achieve a micro averaged F1 score of 0.7498, which places it in the 98th percentile of the leaderboard ranking. You can review the Python code on my GitHub repository at [capac/predicting-earthquake-damage](https://github.com/capac/predicting-earthquake-damage). Most of the code makes use of latest version of [Scikit-Learn (0.23.2)](https://scikit-learn.org/stable/), but also of the [CatBoost (0.24.2)](https://catboost.ai) and [XGBoost (1.20)](https://xgboost.ai) gradient boosting packages.
+As of the date of posting, for the specific _DrivenData_ competition this technique was able to achieve a micro averaged F1 score of 0.7498, which places it in the 98th percentile of the leaderboard ranking. You can review the Python code on my GitHub repository at [capac/predicting-earthquake-damage](https://github.com/capac/predicting-earthquake-damage). Most of the code makes use of latest version of [Scikit-Learn (0.23.2)](https://scikit-learn.org/stable/), but also of the [CatBoost (0.24.2)](https://catboost.ai) and [XGBoost (1.2.0)](https://xgboost.ai) gradient boosting packages.
