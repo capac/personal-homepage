@@ -64,6 +64,8 @@ GEM
       listen (~> 3.0)
     kramdown (2.3.0)
       rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     liquid (4.0.3)
     listen (3.4.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -102,6 +104,7 @@ GEM
     tzinfo-data (1.2020.6)
       tzinfo (>= 1.0.0)
     wdm (0.1.1)
+    webrick (1.7.0)
 
 PLATFORMS
   java
@@ -119,10 +122,12 @@ DEPENDENCIES
   jekyll-redirect-from
   jekyll-seo-tag
   jekyll-theme-lanyon
+  kramdown-parser-gfm
   sassc
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
+  webrick (~> 1.7)
 
 BUNDLED WITH
    2.2.3

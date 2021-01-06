@@ -40,3 +40,8 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # use Sass as a plug-in for a Ruby web framework, we recommend using the
 # sassc gem: https://github.com/sass/sassc-ruby#readme
 gem "sassc"
+
+# kramdown-parser-gfm dependency error, see solution at Stack Overflow link below:
+# https://stackoverflow.com/questions/63335953/jekyll-error-building-page-related-to-kramdown-parser
+gem "kramdown-parser-gfm"
+gem "webrick", "~> 1.7"
