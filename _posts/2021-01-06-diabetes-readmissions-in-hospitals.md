@@ -22,27 +22,15 @@ The data set employed in this analysis is the [Diabetes 130-US hospitals for yea
 
 To get a better feel for the data set, a few exploratory data analysis plots are displyed below. The first plot highlights the amount of null values in the data set. As a consequence of the high prevalence of null values in the `weight`, `medical_specialty` and `payer_code` features, these are dropped from further analysis.
 
-{% include image.html
-    src="/assets/diabetes-readmissions-in-hospitals/null_values.png"
-    alt="Null values in data set"
-    caption="Percentage of null values per feature in decreasing order. The first three features by null values are removed from further analysis."
-%}
+![Null values in data set](/assets/diabetes-readmissions-in-hospitals/null_values.png)
 
 As suggested [in the primary research article used for this analysis](https://www.hindawi.com/journals/bmri/2014/781670/), the link between the probability of readmission and the `HbA1c` measurement is contingent on the primary diagnosis, so both of these features are retained in the data analysis.
 
-{% include image.html
-    src="/assets/diabetes-readmissions-in-hospitals/diagnosis.png"
-    alt="Percentage of patients per condition for primary diagnosis"
-    caption=""
-%}
+![Percentage of patients per condition for primary diagnosis](/assets/diabetes-readmissions-in-hospitals/diagnosis.png)
 
-The data also suggest that the better attention to diabetes as obtained in the `HbA1c` result may improve patient outcomes and lower the cost of inpatient care, so this become an important feature in the analysis.
+The data also suggest that the better attention to diabetes as obtained in the `HbA1c` result may improve patient outcomes and lower the cost of inpatient care, so this is potentially an important feature in the analysis even though the`HbA1c` measurement was only performed in 18.4 % of the inpatient cases. 
 
-{% include image.html
-    src="/assets/diabetes-readmissions-in-hospitals/a1c_result.png"
-    alt="Percentage of HbA1c measurements per category"
-    caption=""
-%}
+![Percentage of HbA1c measurements per category](/assets/diabetes-readmissions-in-hospitals/a1c_result.png)
 
 A summary of the data preparation features that are performed in the analysis are compiled in the bullet form list below:
 
@@ -58,7 +46,32 @@ A summary of the data preparation features that are performed in the analysis ar
  - The primary `diag_1` values are encoded into nine major groups: `circulatory`, `respiratory`, `digestive`, `diabetes`, `injury`, `musculoskeletal`, `genitourinary`, `neoplasms` and `others`.
  - The secondary `diag_2` and additional `diag_3` are removed to simplify the data analysis.
  - `readmitted` column is divided into two `0` and `1` categories, where the `0` category contains the `Not readmitted` and the `> 30 days` cases, and the `1` category consists of the `< 30 days` cases.
- - Categorical variables are encoded for all columns except for the five numerical columns: `time_in_hospital`, `num_lab_procedures`, `num_medications`, `number_diagnoses` and `service_use`.
+ - Categorical variables are encoded for all columns except for the six numerical columns: `time_in_hospital`, `num_lab_procedures`, `num_procedures`, `num_medications`, `number_diagnoses` and `service_use`.
+
+The data set is highly unbalanced due to the very small amount cases of hospital readmissions. To make up for this lack of readmission cases, the minority data set has been oversampled with replacement and added to the rest of the data set. This is accomplished with the [imbalanced-learn](https://imbalanced-learn.org/stable/) package which is part of the [scikit-learn-contrib](https://github.com/scikit-learn-contrib) project. More about imbalanced-learn can be found at [scikit-learn-contrib/imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn). Due to the prevalence of categorical features, the [**imblearn.over_sampling.RandomOverSampler**](https://imbalanced-learn.org/stable/generated/imblearn.over_sampling.RandomOverSampler.html) class has been employed, since it is the only class that can deal with categories. Moreover, the numeric features have been standardized, by subtracting the mean and dividing by the standard deviation, using Scikit-Learn's [**StandardScaler**](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) class.
+
+A correlation plot with the numerical features and the readmission cases is plotted in the figure below. Without much surprise, one can notice that `num_medications` is moderately correlated with `time_in_hospital` and `num_of_procedures`.
+
+![Correlation plot of numeric feature with readmission](/assets/diabetes-readmissions-in-hospitals/corr_plot.png)
+
+Let now proceed to the modeling of our data!
+
+# Data modeling
+
+The data modeling make use of three, basic classification algorithms which are all available in Scikit-Learn: [**LogisticRegression**](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html?highlight=logisticregression#sklearn.linear_model.LogisticRegression), [**DecisionTreeClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html?highlight=decisiontreeclassifier#sklearn.tree.DecisionTreeClassifier) and [**RandomForestClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html?highlight=randomforest#sklearn.ensemble.RandomForestClassifier). The analysis calculates the accuracy, precision, recall, F1 score and Brier score on the data.
+
+<style>
+td, th {
+          font-size: 140%
+       }
+</style>
+|--------------------------|--------------|---------------|------------|--------------|----------------------|
+|                          |   Accuracy   |   Precision   |   Recall   |   F1 score   |  Average Brier score |
+|:------------------------:|:------------:|:-------------:|:----------:|:------------:|:--------------------:|
+|    Logistic Regression   |    0.5838    |     0.5914    |   0.5223   |    0.5547    |   0.2430 +/- 0.0009  |
+| Decision Tree Classifier |    0.6973    |     0.6685    |   0.7738   |    0.7173    |   0.2100 +/- 0.0022  |
+| Random Forest Classifier |    0.9959    |     0.9923    |   0.9995   |    0.9959    |   0.0041 +/- 0.0009  |
+|--------------------------|--------------|---------------|------------|--------------|----------------------|
 
 
 <!-- # Figure or image without caption
