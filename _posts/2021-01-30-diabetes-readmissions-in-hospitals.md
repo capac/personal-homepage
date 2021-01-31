@@ -65,11 +65,11 @@ Let now proceed to the modeling of our data!
 
 # Data modeling
 
-The data modeling makes use of three, basic classification algorithms, all of which are available in Scikit-Learn: [**LogisticRegression**](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html?highlight=logisticregression#sklearn.linear_model.LogisticRegression), [**DecisionTreeClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html?highlight=decisiontreeclassifier#sklearn.tree.DecisionTreeClassifier) and [**RandomForestClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html?highlight=randomforest#sklearn.ensemble.RandomForestClassifier). For each of these algorithms in the table below, the analysis calculates the accuracy, precision, recall, F-score and cross-validated average Brier score for readmitted cases.
+The data modeling makes use of three, basic classification algorithms, all of which are available in Scikit-Learn: [**LogisticRegression**](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html?highlight=logisticregression#sklearn.linear_model.LogisticRegression), [**DecisionTreeClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html?highlight=decisiontreeclassifier#sklearn.tree.DecisionTreeClassifier) and [**RandomForestClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html?highlight=randomforest#sklearn.ensemble.RandomForestClassifier). For each of these algorithms in the table below, the analysis calculates the accuracy, precision, recall, F-score and cross-validated average [Brier score](https://en.wikipedia.org/wiki/Brier_score) for readmitted cases.
 
 <style>
 td, th {
-          font-size: 140%
+          font-size: 120%
        }
 </style>
 |--------------------------|--------------|---------------|------------|--------------|----------------------|
@@ -80,43 +80,45 @@ td, th {
 | Random Forest Classifier |    0.9965    |     0.9935    |   0.9995   |    0.9965    |   0.0035 +/- 0.0010  |
 |--------------------------|--------------|---------------|------------|--------------|----------------------|
 
+From a first view one can see that the Random Forest Classifier easily comes ahead of all the other algorithms. The high [F-score](https://en.wikipedia.org/wiki/F-score) tell us how well the Random Forest classifier performs on the data set, as a high F-score reflects both a high recall and precision. 
+
 ## Confusion matrix heatmap plots
 
-From a first view one can see that the Random Forest Classifier easily comes ahead of all the other algorithms. The high [F-score](https://en.wikipedia.org/wiki/F-score) tell us how well the Random Forest classifier performs on the data set, as a high F-score reflects both a high recall and precision. A heatmap plot of the confusion matrix gives a visual representation of the high performance of the model.
+Following the initial analysis shown in the table, the heatmap plot of the confusion matrices is generated to give a visual representation of the performance of the models. The values in the plot are the number of the predictions in each category divided by the sum of the values along the rows. The values shown correspond exactly in the upper left-hand corner to the precision for the non-readmitted cases and in the lower right-hand corner to the precision for the readmitted cases.
 
-The values in the plot are the number of the predictions in each category divided by the sum of the values along the rows. The values shown correspond precisely to the precision in the upper, left-hand corner for the non-readmitted cases and the in the lower right-hand corner for the readmitted cases.
-
-The decision tree model performs much better than the logistic regression model, although there are still quite a few outliers on the transverse diagonal as compared to the main one. However, the random forest classifier confusion matrix accomplishes the best selection between all cases of true positives, true negatives, false positives and false negatives, as shown in the most right-hand side plot below.
+The decision tree model performs much better than the logistic regression model, although there are still quite a few outliers on the transverse diagonal as compared to the main one. However, the random forest classifier confusion matrix accomplishes the best selection between all cases of true positives, true negatives, false positives and false negatives, as shown in most right-hand side plot below.
 
 ![Logistic regression, decision tree classifier and random forest classifier confusion matrix plots](/assets/diabetes-readmissions-in-hospitals/confusion_matrix_plots.png)
 
 ## ROC curves and AUC
 
-The [receiver operating characteristic curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic), or ROC curve, are ever better capable of showing the great performance of the random forest classifier compared to the other two algorithms. These plots also contain the _area under the curve_, or just simply AUC, calculations in the bottom right corner. The bigger this value is the more snug the ROC curve will be along the left and top axes of the plot, which allows for the best discrimination for the true positive and false positive rates, against a series of thresholds that produce the rates themselves.
+The [receiver operating characteristic curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic), or ROC curve, are better capable of showing the greater performance of the random forest classifier compared to the other two algorithms. These plots also contain the _area under the curve_, or just simply AUC, calculations in the bottom right corner. The bigger this value is the more snug the ROC curve will be along the left and top axes of the plot. The ROC curve allows for the best discrimination of the true positive and false positive rates against a series of thresholds that produce the rates themselves. Once again, the random forest classifier achieves the best performance among the three algorithms used.
 
 ![Receiver operating characteristic curve for logistic regression, decision tree classifier and random forest classifier](/assets/diabetes-readmissions-in-hospitals/auc_plots.png)
 
-Here as well the Random Forest classifier shines above the other two models. The random forest classifier model uses bagging, or sampling with replacement, as the default. The final prediction from this classifier is a hard voting on the individual predictors. During training each individual decision tree learner of the random forest is trained on a random subset of the data, given by the square root of the number of features.
+Here as well the random forest classifier shines above the other two models. The model uses bagging, or sampling with replacement, as the default. The final prediction from this classifier is a hard voting on the individual predictors. During training each individual decision tree learner of the random forest is trained on a random subset of the data, given by the square root of the number of features.
 
 ## Learning curves
 
-To clarify for cases of possible model overfitting, the learning curves with one-sigma error bands are calculated against all three models. As can be seen in the plots below, while a case can be made for overfitting for the logistic regression and decision tree models, there doesn't seem to be any case of overfitting with the random forest classifier model.
+To clarify for cases of possible model overfitting, the learning curves with one standard deviation error bands are calculated against all three models. As can be seen in the plots below, while a case can be made for overfitting in the logistic regression and decision tree models, there doesn't seem to be any case of overfitting with the random forest classifier model.
 
 ![Learning curves](/assets/diabetes-readmissions-in-hospitals/learning_curves_plot.png)
 
 ## Feature importances
 
-Finally, the normalized feature importance plot is shown below, which highlights the features that appear to be most influential for readmission. Although the values aren't high, `num_lab_procedures`, `num_medications` and to a lesser extent `time_in_hospital` are the features that appear to be more helpful in determining readmission cases. The plots shows one-sigma errors bars, which help even more to signal out those features that are related to readmission.
+Finally, the normalized feature importance plot is shown below, which highlights the features that appear to be most influential for readmission. Although the values aren't high, `num_lab_procedures`, `num_medications` and to a lesser extent `time_in_hospital` are the features that appear to be more helpful in determining readmission cases. The plots shows one standard deviation errors bars, which help even more to signal out those features that are related to readmission.
 
 ![Feature importances](/assets/diabetes-readmissions-in-hospitals/feature_importances.png)
 
 ## Grid search
 
-A brief attempt was undertaken to fine tune the hyperparameters of the algorithm using Scikit-Learn's [**GridSearchCV**](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html#sklearn.model_selection.GridSearchCV) class, but it didn't change the final outcome in any significant manner. The hyperparameters chosen (`n_estimators` and `max_depth`) simply maximize the parameter values at the chosen seed, and aren't considered conclusive results by any means. However, there appears to be little room for improvement by changing these values, and the results for the random forest classifier model impress enough to not warrant further analysis.
+A brief attempt was undertaken to fine tune the hyperparameters of the algorithm using Scikit-Learn's [**GridSearchCV**](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html#sklearn.model_selection.GridSearchCV) class, but it didn't change the final outcome in any significant manner. The hyperparameters chosen (`n_estimators` and `max_depth`) maximize the parameter values at the chosen seed, but there appears to be little room for improvement by changing these values and the results for the random forest classifier model impress enough to not warrant further analysis.
 
 # Conclusions
 
-The challenge for me in this analysis was to confront the large number of categorical features and the overwhelming ratio of not-readmitted to readmitted cases in the data. If you have any comments or suggestions, please feel free to make remarks in the section below. You are more than welcome to take a look at the [code in my GitHub repository](https://github.com/capac/diabetes-readmission-in-US-hospitals). For the analysis, the following software packages were used: [scikit-learn](https://scikit-learn.org/stable/index.html) (version 0.24.1), [pandas](https://pandas.pydata.org/) (version 1.2.1), [matplotlib](https://matplotlib.org/) (version 3.3.3), [seaborn](http://seaborn.pydata.org/) (version 0.11.1) and [imbalanced-learn](https://imbalanced-learn.org/stable/) (version 0.7.0).
+The better performance of the random forest classifier is likely due to the advantage of the ensemble technique itself which is inherent in the random forest algorithm. By random selection of the features, no individual feature is predominant over the others, and averaging the outcome of the decision trees by hard voting allows for a noticeable decrease in spurious noise effects. The model performs very well on the validation data as well, which demonstrates the lack of the model overfitting the training data.
+
+The challenge in this analysis was to confront the large number of categorical features and the overwhelming ratio of not-readmitted to readmitted cases in the data, and the complete data analysis procedure seems to have satisfactorily tackled the problem. If you have any comments or suggestions, please feel free to make remarks in the section below. You are more than welcome to take a look at the [code in my GitHub repository](https://github.com/capac/diabetes-readmission-in-US-hospitals). For the analysis, the following software packages were used: [scikit-learn](https://scikit-learn.org/stable/index.html) (version 0.24.1), [pandas](https://pandas.pydata.org/) (version 1.2.1), [matplotlib](https://matplotlib.org/) (version 3.3.3), [seaborn](http://seaborn.pydata.org/) (version 0.11.1) and [imbalanced-learn](https://imbalanced-learn.org/stable/) (version 0.7.0).
 
 <!-- # Figure or image without caption
 ![Plot](/assets/...)
