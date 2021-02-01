@@ -16,4 +16,4 @@ One can notice the outflow of bicycles from the King's Cross and Waterloo train 
 
 The data is freely available and can be downloaded from [the public open data web site for TfL](https://cycling.data.tfl.gov.uk/). The code for the Bokeh visualization is on [my GitHub repository](https://github.com/capac/bicycle-use-visualization-with-bokeh). The actual visualization is hosted at the link below. Check it out, and tell me what you think.
 
-[Data visualization for weekday public bicycle use in London UK using Bokeh](https://bicycle-use-with-bokeh.herokuapp.com/main)
+[**Data visualization for weekday public bicycle use in London UK with Bokeh**](https://bicycle-use-with-bokeh.herokuapp.com/main)
