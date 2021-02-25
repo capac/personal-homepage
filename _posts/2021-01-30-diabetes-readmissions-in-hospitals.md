@@ -22,16 +22,36 @@ The data set employed in this analysis is the [Diabetes 130-US hospitals for yea
 
 To get a better feel for the data set, a few exploratory data analysis plots are displayed below. The first three plots highlight the percentage of null values in the data set, the feature composition for the medical specialty of the admitting primary physician and the percent breakdown for payer codes. As a consequence of the high prevalence of null values in the `weight`, `medical_specialty` and `payer_code` features, these features are dropped from further analysis.
 
-![Percentage of null values in data set](/assets/diabetes-readmissions-in-hospitals/null_values_payer_codes_speciality.png)
+<!-- ![Percentage of null values in data set](/assets/diabetes-readmissions-in-hospitals/null_values_payer_codes_speciality.png) -->
+
+<div class="click-zoom">
+  <label>
+    <input type="checkbox">
+    <img src="/assets/diabetes-readmissions-in-hospitals/null_values_payer_codes_speciality.png">
+  </label>
+</div>
 
 As shown below, the analysis exposes a higher percentage predominance of elder patients above the age of 40. Moreover, the middle plot shows the majority of patients of Caucasian origins, while the last plot displays a slightly greater presence of female patients than male patients.
 
-![Percentage presence for age, race and gender](/assets/diabetes-readmissions-in-hospitals/age_race_gender.png)
+<!-- ![Percentage presence for age, race and gender](/assets/diabetes-readmissions-in-hospitals/age_race_gender.png) -->
+
+<div class="click-zoom">
+  <label>
+    <input type="checkbox">
+    <img src="/assets/diabetes-readmissions-in-hospitals/age_race_gender.png">
+  </label>
+</div>
 
 [The primary research article used for this analysis](https://www.hindawi.com/journals/bmri/2014/781670/) suggests that the probability of readmission is contingent on the `HbA1c` measurement in the primary diagnosis, so both the `HbA1c` measurement and the primary diagnosis features are retained in the data analysis, even though the`HbA1c` measurement was only performed in less than 19% of the inpatient cases. 
 
-![Percentage presence for A1Cresult, primary patient diagnosis and cases for readmission](/assets/diabetes-readmissions-in-hospitals/a1c_diagnosis_readmitted.png)
+<!-- ![Percentage presence for A1Cresult, primary patient diagnosis and cases for readmission](/assets/diabetes-readmissions-in-hospitals/a1c_diagnosis_readmitted.png) -->
 
+<div class="click-zoom">
+  <label>
+    <input type="checkbox">
+    <img src="/assets/diabetes-readmissions-in-hospitals/a1c_diagnosis_readmitted.png">
+  </label>
+</div>
 
 ## Correlation plot
 
@@ -92,20 +112,42 @@ Following the initial analysis shown in the table, the heat map plot of the conf
 
 The decision tree model performs better than the logistic regression model, although there are still quite a few outliers on the transverse diagonal as compared to the main one. However, the random forest classifier confusion matrix accomplishes the best selection between all cases of true positives, true negatives, false positives and false negatives, as shown in most right-hand side plot below.
 
-![Logistic regression, decision tree classifier and random forest classifier confusion matrix plots](/assets/diabetes-readmissions-in-hospitals/confusion_matrix_plots.png)
+<!-- ![Logistic regression, decision tree classifier and random forest classifier confusion matrix plots](/assets/diabetes-readmissions-in-hospitals/confusion_matrix_plots.png) -->
+
+<div class="click-zoom">
+  <label>
+    <input type="checkbox">
+    <img src="/assets/diabetes-readmissions-in-hospitals/confusion_matrix_plots.png">
+  </label>
+</div>
+
 
 ## ROC curves and AUC
 
 The [_receiver operating characteristic_ curve](https://en.wikipedia.org/wiki/Receiver_operating_characteristic), or ROC curve, are also capable of showing the greater performance of the random forest classifier compared to the other two algorithms. The ROC curve displays the true positive and false positive rates against a series of thresholds that produce these rates, and the best curve is the one that produces the highest true positive rate against the smallest false positive rate. These plots also contain the _area under the curve_ (AUC) calculations in the bottom right corner. The bigger this value is the more snug the ROC curve will be along the left and top axes of the plot. In this regard against the AUC value, the random forest classifier achieves the best performance among the three algorithms used.
 
-![Receiver operating characteristic curve for logistic regression, decision tree classifier and random forest classifier](/assets/diabetes-readmissions-in-hospitals/auc_plots.png)
+<!-- ![Receiver operating characteristic curve for logistic regression, decision tree classifier and random forest classifier](/assets/diabetes-readmissions-in-hospitals/auc_plots.png)
+ -->
 
+<div class="click-zoom">
+  <label>
+    <input type="checkbox">
+    <img src="/assets/diabetes-readmissions-in-hospitals/auc_plots.png">
+  </label>
+</div>
 
 ## Learning curves
 
 To clarify for cases of possible model overfitting, the learning curves with one standard deviation error bands are calculated against all three models. As can be seen in the plots below, while a case can be made for overfitting in the logistic regression and decision tree models, there doesn't seem to be any case of overfitting with the random forest classifier model.
 
-![Learning curves](/assets/diabetes-readmissions-in-hospitals/learning_curves_plot.png)
+<!-- ![Learning curves](/assets/diabetes-readmissions-in-hospitals/learning_curves_plot.png) -->
+
+<div class="click-zoom">
+  <label>
+    <input type="checkbox">
+    <img src="/assets/diabetes-readmissions-in-hospitals/learning_curves_plot.png">
+  </label>
+</div>
 
 ## Feature importances
 
