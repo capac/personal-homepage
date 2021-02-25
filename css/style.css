@@ -24,6 +24,28 @@
   color: #9a9a9a;
 }
 
+/* Zoom in and out on mouse click with CSS */
+/* https://stackoverflow.com/questions/39858998/zoom-in-and-out-on-mouse-click-with-css */
+.click-zoom input[type=checkbox] {
+  display: none
+}
+
+.click-zoom img {
+  margin: 0px;
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+.click-zoom input[type=checkbox]:checked~img {
+  transform: scale(1.6);
+  cursor: zoom-out;
+  box-shadow: 10px 10px 20px #7a7a7a;
+        -moz-box-shadow: 10px 10px 20px #7a7a7a;
+        -webkit-box-shadow: 10px 10px 20px #7a7a7a;
+        -khtml-box-shadow: 10px 10px 20px #7a7a7a;
+}
+/* Zoom in and out on mouse click with CSS */
+
 .masthead {
   margin-bottom: 2rem;
 }
