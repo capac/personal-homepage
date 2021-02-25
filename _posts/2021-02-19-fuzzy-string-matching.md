@@ -22,5 +22,12 @@ Sometimes you need to match to a standard format data that have less than par qu
     caption="Image caption"
 %} -->
 
+<!-- # Figure or image with zoom
+<div class="click-zoom">
+  <label>
+    <input type="checkbox">
+    <img src="/assets/...">
+  </label>
+</div> -->
 
 If you have any comments or suggestions, please feel free to make remarks in the section below. You are more than welcome to take a look at the [code in my GitHub repository](https://github.com/capac/fuzzy-string-matching). For the analysis, the following software packages were used: [scikit-learn](https://scikit-learn.org/stable/index.html) (version 0.24.1), [pandas](https://pandas.pydata.org/) (version 1.2.2), [matplotlib](https://matplotlib.org/) (version 3.3.4), [seaborn](http://seaborn.pydata.org/) (version 0.11.1) and [imbalanced-learn](https://imbalanced-learn.org/stable/) (version 0.8.0).
