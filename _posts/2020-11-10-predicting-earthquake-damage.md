@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Predicting Earthquake Damage with Ensemble Learners
+title: Predicting Earthquake Damage With Ensemble Learners
 featured: True
 image: /assets/predicting-earthquake-damage-with-ensemble-learners/sebastian-pena-lambarri-7ky9_t_mpRI-unsplash.jpg
 image-url: https://unsplash.com/photos/7ky9_t_mpRI

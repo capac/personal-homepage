@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Determining the causes of diabetes readmissions in hospitals
+title: Determining the Causes of Diabetes Readmissions in Hospitals
 featured: true
 image: /assets/diabetes-readmissions-in-hospitals/analysis-2030265_1280.jpg
 image-url: https://pixabay.com/photos/analysis-biochemistry-biologist-2030265/

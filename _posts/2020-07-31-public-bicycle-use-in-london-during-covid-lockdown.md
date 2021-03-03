@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Public Bicycle Use in London during COVID Lockdown
+title: Public Bicycle Use in London During COVID Lockdown
 featured: true
 image: /assets/public-bicycle-use-in-london-during-covid-lockdown/robert-keane-6GDhWC08zO4-unsplash.jpg
 image-url: https://unsplash.com/photos/6GDhWC08zO4

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Formatting data for matplotlib axes
+title: Formatting Data for Matplotlib Axes
 draft: True
 featured: False
 image: /assets/formatting-axes-in-matplotlib/pexels-stein-egil-liland-3855630.jpg
