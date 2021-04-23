@@ -89,7 +89,7 @@ Let now proceed to the modeling of our data!
 
 # Data modeling
 
-For the sake of interpretation, the data modeling makes use of three, simple classification algorithms, all of which are available in Scikit-Learn: [**LogisticRegression**](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html?highlight=logisticregression#sklearn.linear_model.LogisticRegression), [**DecisionTreeClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html?highlight=decisiontreeclassifier#sklearn.tree.DecisionTreeClassifier) and [**RandomForestClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html?highlight=randomforest#sklearn.ensemble.RandomForestClassifier). For each of these algorithms in the table below, the analysis calculates the accuracy, precision, recall, F-score and cross-validated average [Brier score](https://en.wikipedia.org/wiki/Brier_score) for readmitted cases.
+For the sake of interpretation, the data modeling makes use of three, simple classification algorithms, all of which are available in Scikit-Learn: [**LogisticRegression**](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), [**DecisionTreeClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html) and [**RandomForestClassifier**](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). For each of these algorithms in the table below, the analysis calculates the accuracy, precision, recall, F-score and cross-validated average [Brier score](https://en.wikipedia.org/wiki/Brier_score) for readmitted cases.
 
 <style>
 td, th {
