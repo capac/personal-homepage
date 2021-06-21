@@ -70,7 +70,7 @@ A summary of the data preparation and feature engineering that are performed in 
  - Null, not admitted and not mapped values are removed from `admission_type_id`.
  - All variations of `Expired at...` or `Expired` in `discharge_disposition_id` are removed since they won't be responsible for further readmission cases. Null, not admitted and unknown/invalid values in `discharge_disposition_id` are removed as well.
  - Null, not available, not mapped and unknown/invalid values are removed from `admission_source_id`.
- - Following the analysis conditions laid out in [the primary research article for this work](https://www.hindawi.com/journals/bmri/2014/781670/), duplicate patient data are removed to maintain the statistical independence of the data as required by logistic regression, after which the `patient_nbr` column is dropped.
+ - Following the analysis conditions laid out in [the primary research article for this work](https://www.hindawi.com/journals/bmri/2014/781670/), duplicate patient data are removed to maintain the statistical independence of the data, after which the `patient_nbr` column is dropped.
  - `citoglipton` and `examide` are removed since they don't offer any discriminatory information.
  - `glimepiride-pioglitazone` and `metformin-rosiglitazone` are removed as well due to the lack of discriminatory information. 
  - `number_outpatient`, `number_emergency` and `number_inpatient` are summed into one column called `service_use` and then removed.
